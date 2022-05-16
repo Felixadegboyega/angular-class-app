@@ -1,0 +1,32 @@
+
+<div class="row">
+	<div class="col-12">
+		<div class="row bg-white">
+			<div class="shadow-sm w-100">
+				<h4 class="m-2">Todos</h4>
+				<div class="form-inline mb-2">
+					<input type="text" class="form-control w-75 btn-sm ml-2" [(ngModel)]="editInput">
+					<button class="btn btn-sm btn-primary ml-auto mr-2" (click)="save()">Save</button>
+				</div>
+			</div>
+			<div class="col-12 mb-3" style="height: 65vh; overflow-y: auto;">
+				<div class="row mt-1">
+					<div class="mb-1 col-12 pl-3 pr-3 pb-2" *ngFor="let i = index; let todo of todoList" >
+						<div>
+							<span [style.color]="todo.completed ? 'green' : 'red'">{{todo.title}}</span>
+							<button class="btn float-right btn-sm btn-outline-danger" (click)="delete(i)" >Delete</button>
+							<button class="btn btn-sm btn-outline-info mr-2 float-right modal-toggle" (click)="edit(i)">Edit</button>
+							<button class="btn btn-danger btn-sm float-right mr-2" (click)="viewTodo(todo.id)">View</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 mb-2">
+		<div class="row form-inline">
+			<input type="text" class="w-75 ml-2 form-control " [(ngModel)]="todo">
+			<button class="btn btn-danger ml-auto mr-2 btn-sm" (click)="addTodo()">Save</button>
+		</div>
+	</div>
+</div>

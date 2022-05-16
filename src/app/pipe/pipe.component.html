@@ -1,0 +1,22 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-10 mx-auto col-md-6">
+			<input type="text" placeholder="Search" [(ngModel)]="searchText" class="form-control m-2">
+			<div> Item: 
+				{{item}}
+			</div>
+			<div>
+				Price: {{price | currency:'NGN':'symbol-narrow'}}
+			</div>
+			<span>{{test | change}}</span>
+
+
+			<input type="text" class="m-2 form-control" [(ngModel)]="item" placeholder="ItemName">
+			<button class="btn btn-sm btn-outline-info" (click)="add()">Add</button>
+			<ul>
+				<li *ngFor="let item of itemArray | filterpipe:searchText">{{item}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
