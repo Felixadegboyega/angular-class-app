@@ -1,0 +1,8 @@
+ng install -g @angular/cli
+ng generate
+npm install bootstrap
+@import "~dircetory"
+
+
+
+// dependency injection

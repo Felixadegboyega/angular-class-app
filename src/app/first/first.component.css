@@ -1,0 +1,13 @@
+.login{
+	height:100vh;
+}
+.logo{
+	width:100px
+}
+.login-input{
+	border-top: none;
+	border-right:none;
+	border-left:none;
+	border-bottom:1px solid #ccc;
+	outline: none;
+}

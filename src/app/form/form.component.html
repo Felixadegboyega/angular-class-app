@@ -1,0 +1,37 @@
+
+<div class="container-fluid mb-5">
+	<div class="row">
+		<div class="col-md-5 col-10 mx-auto mt-2">
+			<!-- <form class="mx-auto" #form="ngForm">
+				<input type="text" [(ngModel)]="firstName" required [class.is-valid]="firstname.valid" name="firstname" class="form-control m-2" placeholder="FirstName" #firstname="ngModel">
+				<div *ngIf="firstname.invalid && firstname.dirty">
+					<small>Please enter your Name</small>
+				</div>
+				<input type="text" [(ngModel)]="secondName" name="secondname" class="form-control m-2" placeholder="SecondName">
+				<input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" required class="form-control m-2" placeholder="PhoneNumber">
+				<button type="submit" [disabled]="form.invalid" class="btn btn-sm btn-info m-2 w-100">Submit</button>
+			</form> -->
+		</div>
+
+
+			<!-- form Group -->
+			<!-- <div class="col-md-5 col-10 mx-auto mt-2">
+				<form action="" class="mx-auto" [formGroup]="formG">
+					<input type="text" formControlName="firstname" class="form-control m-2">
+					<input type="text" formControlName="secondname" class="form-control m-2">
+					<input type="text" formControlName="phonenumber" class="form-control m-2">
+					<button type="submit" (click)="submitForm()" class="btn btn-sm btn-info m-2 w-100">Submit</button>
+				</form>
+			</div>	 -->
+
+				<!-- form Builder -->
+		<div class="col-md-5 col-10 mx-auto mt-2">
+			<form action="" class="mx-auto" [formGroup]="formB">
+				<input type="text" formControlName="firstname" class="form-control m-2">
+				<input type="text" formControlName="secondname" class="form-control m-2">
+				<input type="text" formControlName="phonenumber" class="form-control m-2">
+				<button type="submit" (click)="submitForm()" class="btn btn-sm btn-info m-2 w-100">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
